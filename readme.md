@@ -33,5 +33,34 @@ const uniqueFilter = uniqueFilterFactory()
 const numberList = [3, 2, 1, 2, 3]
 
 // Funções encadeadas
-uniqueFilter.setValues(numberList).inspect().getUniqueNumber()
+const result = uniqueFilter.setValues(numberList).inspect().getUniqueNumber()
 ```
+
+O código acima produz a seguinte saída:
+
+
+```js
+ {
+    uniqueValue: 1,
+    listValue: [3, 2, 1, 2, 3],
+    message: 'ok'
+ }
+```
+
+O resultado é então armazenado em `result` e pode ser acessado da seguinte forma:
+
+```js
+    console.log(result.uniqueValue)
+```
+
+O código completo fica assim:
+
+```js
+const uniqueFilter = uniqueFilterFactory()
+const numberList = [3, 2, 1, 2, 3]
+
+// Funções encadeadas
+const result = uniqueFilter.setValues(numberList).inspect().getUniqueNumber()
+console.log(result.uniqueValue)
+```
+
